@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Xml.Serialization;
 using CmsData;
+using CmsWeb.Code;
 using UtilityExtensions;
 
 namespace CmsWeb.Models.ExtraValues
@@ -35,6 +36,36 @@ namespace CmsWeb.Models.ExtraValues
                     where vv.Table == table
                     from v in vv.Values
                     select v).ToList();
+        }
+
+        public class StandardValueNameType
+        {
+            public string Name { get; set; }
+            public string Type { get; set; }
+        }
+
+        public static List<StandardValueNameType> GetViewableNameTypes(string table)
+        {
+            var list = (from vv in GetStandardExtraValues(table)
+                        where vv.Type != "Bits"
+                        where vv.UserCanView()
+                        select new StandardValueNameType()
+                        { 
+                            Name = vv.Name, 
+                            Type = vv.Type
+                        }).ToList();
+
+            var list2 = (from vv in GetStandardExtraValues(table)
+                         where vv.UserCanView()
+                         where vv.Type == "Bits"
+                         from v in vv.Codes
+                         select new StandardValueNameType()
+                         { 
+                             Name = v, 
+                             Type = vv.Type
+                         }).ToList();
+
+            return list.Union(list2).OrderBy(vv => vv.Name).ToList();
         }
 
         public class ViewValue
