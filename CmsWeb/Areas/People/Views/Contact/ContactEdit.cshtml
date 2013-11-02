@@ -7,7 +7,7 @@
         <legend>Contact</legend>
         @if (Model.Incomplete.HasValue())
         {
-            <div class="alert alert-error">
+            <div class="alert alert-danger">
                 @Model.Incomplete
             </div>
         }
@@ -32,8 +32,8 @@
             @Html.ValidationMessage("Comments")
         </div>
         <div class="right">
-            <a id="cancel" class="btn ajax" href="/Contact2/ContactDisplay/@Model.ContactId">Cancel</a>
-            <a id="update" class="btn btn-primary ajax" href="/Contact2/ContactUpdate/@Model.ContactId">Update</a>
+            <a id="cancel" class="btn btn-default ajax" href="/Contact2/ContactDisplay/@Model.ContactId">Cancel</a>
+            <a id="update" class="btn btn-default btn-primary ajax" href="/Contact2/ContactUpdate/@Model.ContactId">Update</a>
         </div>
     </fieldset>
     @Html.ValidationMessage("contactors")

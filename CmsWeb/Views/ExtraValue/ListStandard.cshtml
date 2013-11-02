@@ -30,7 +30,7 @@
                         <td>
                             @if (f.Type.StartsWith("Text"))
                             { 
-                                <a href="/ExtraValue/SwitchMultiline/@Model.Table/@Model.Location?name=@f.Name" class="ajax btn btn-mini">@f.SwitchMultiLineText</a>
+                                <a href="/ExtraValue/SwitchMultiline/@Model.Table/@Model.Location?name=@f.Name" class="ajax btn btn-xs">@f.SwitchMultiLineText</a>
                             }
                         </td>
                         <td><a href="/ExtraValue/DeleteStandard/@Model.Table/@Model.Location?name=@f.Name" 
@@ -46,7 +46,7 @@
         </table>
     </div>
     <div class="modal-footer">
-        <a id="CloseListStandard" href="#" class="btn">Close</a>
-        <a href="/ExtraValue/ApplyOrder/@Model.Table/@Model.Location" class="btn btn-warning ajax">Apply Ordering</a>
+        <a id="CloseListStandard" href="#" class="btn btn-default">Close</a>
+        <a href="/ExtraValue/ApplyOrder/@Model.Table/@Model.Location" class="btn btn-default btn-warning ajax">Apply Ordering</a>
     </div>
 </form>

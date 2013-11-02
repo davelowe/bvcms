@@ -4,7 +4,7 @@
     var attributes = ViewData["PlainSelect"] != null ? new { plain = "true" } : null;
         
 }
-<div class="control-group">
+<div class="form-group">
     @Html.LabelFor(m => m, new { @class = "control-label" })
     <div class="controls code-dropdown">
         @Html.DropDownListForCodeInfo(m => m, true, Model.Items, htmlAttributes: attributes) 

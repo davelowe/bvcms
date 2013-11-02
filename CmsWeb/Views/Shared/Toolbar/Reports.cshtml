@@ -4,7 +4,7 @@
 <ul class="dropdown-menu dropdown-div-reports">
     <li>
         <div>
-            <ul class="span4 unstyled pull-left">
+            <ul class="col-md-4 unstyled pull-left">
                 <li class="header">Export Excel</li>
                 <li><a href='/Export2/Excel/@qid' class="dialog-options" data-target="/Dialog/ChooseFormat">Standard</a></li>
                 <li><a href='/Export2/Csv/@qid' class="dialog-options" data-target="/Dialog/ChooseFormat">Mailing / Bulk (csv)</a></li>
@@ -31,7 +31,7 @@
                 <li><a href='/Export2/Excel/Library/@qid'>Library</a></li>
                 <li><a href='/Export2/Excel/Church/@qid'>Other Churches</a></li>
             </ul>
-            <ul class="span4 unstyled pull-left">
+            <ul class="col-md-4 unstyled pull-left">
                 <li class="header">Reports</li>
                 @if ((bool?)ViewBag.OrganizationContext == true)
                 {
@@ -70,7 +70,7 @@
                     <li><a id="RallyRollsheetLink" href='#' title="Rally Rollsheet Report">Rally Rollsheet</a></li>
                 }
             </ul>
-            <ul class="span4 unstyled pull-left">
+            <ul class="col-md-4 unstyled pull-left">
                 <li class="header"> Address Labels </li>
                 <li><a href='/Reports2/AveryAddress/@qid' class="dialog-options" data-target="/Dialog/ChooseFormat">Address</a></li>
                 <li><a target="_blank" href="/Reports2/EmployerAddress/@qid">Employer</a></li>

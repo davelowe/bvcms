@@ -27,14 +27,14 @@
     </table>
 </div>
 <div class="modal-footer">
-    <a class="btn" data-dismiss="modal">Cancel</a>
+    <a class="btn btn-default" data-dismiss="modal">Cancel</a>
     @if (!Model.OnlyOne)
     {
-        <a href="/SearchAdd2/SearchPerson" class="btn ajax">Another Search</a> @:or 
+        <a href="/SearchAdd2/SearchPerson" class="btn btn-default ajax">Another Search</a> @:or 
         if (Model.CanAdd)
         { 
-        <a href="/SearchAdd2/NewPerson/@Model.PendingList[Model.PendingList.Count - 1].FamilyId" class="btn ajax">Add to Last Family</a> @:or 
+        <a href="/SearchAdd2/NewPerson/@Model.PendingList[Model.PendingList.Count - 1].FamilyId" class="btn btn-default ajax">Add to Last Family</a> @:or 
         }
     }
-    <a href="/SearchAdd2/CommitAdd" class="btn btn-primary commit">Commit and Add</a>
+    <a href="/SearchAdd2/CommitAdd" class="btn btn-default btn-primary commit">Commit and Add</a>
 </div>

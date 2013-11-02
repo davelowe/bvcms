@@ -1,6 +1,6 @@
 ﻿@using UtilityExtensions
 @model DateTime?
-<div class="control-group">
+<div class="form-group">
     @Html.LabelFor(m=> m, new { @class = "control-label"})
     <div class="controls">
         <p class="@(Model.HasValue ? "alert alert-danger" : "" )">@Model.FormatDate()</p>

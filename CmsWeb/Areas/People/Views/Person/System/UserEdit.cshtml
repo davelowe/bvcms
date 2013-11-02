@@ -9,7 +9,7 @@
             <a class="helplink" target="_blank" href='@Util.HelpLink("ManageUser")'>help</a>
             </span>
         </legend>
-        <div class="row-fluid">
+        <div class="row">
             <div class="inline align-top wauto">
                 @Html.EditorFor(m => m.Username)
             </div>
@@ -38,9 +38,9 @@
         <div>
             User Created: @Model.CreationDate.FormatDateTm()
             <div class="pull-right inline">
-                <a href="/Person2/Impersonate/@Model.UserId" class="btn btn-warning">Impersonate User</a>
-                <a href="/Person2/UserDelete/@Model.UserId" class="btn btn-danger ajax" data-confirm="Are you sure you want to remove User @Model.Username?">Delete User</a>
-                <a href="/Person2/UserUpdate/@Model.UserId" class="btn btn-primary validate ajax">Save</a>
+                <a href="/Person2/Impersonate/@Model.UserId" class="btn btn-default btn-warning">Impersonate User</a>
+                <a href="/Person2/UserDelete/@Model.UserId" class="btn btn-default btn-danger ajax" data-confirm="Are you sure you want to remove User @Model.Username?">Delete User</a>
+                <a href="/Person2/UserUpdate/@Model.UserId" class="btn btn-default btn-primary validate ajax">Save</a>
                 <div class="inline wauto">@Html.Editor("sendwelcome", new { label = "Send Welcome" })</div>
             </div>
         </div>
@@ -48,7 +48,7 @@
 </form>
 @helper Role(string role, string warning = null)
 {
-    <div class="control-group @(warning.HasValue() ? "warning" : "")">
+    <div class="form-group @(warning.HasValue() ? "warning" : "")">
         <label class="control-label">@role</label>
         <div class="controls">
             <input name="role" value="@role" class="ckbox" type="checkbox" @(Model.Roles.Any(ro => ro == role) ? "checked='checked'" : "") />

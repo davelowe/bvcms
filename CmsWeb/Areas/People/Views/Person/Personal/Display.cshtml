@@ -2,7 +2,7 @@
 @model CmsWeb.Areas.People.Models.BasicPersonInfo
 <form class="form form-horizontal ajax span12 pad-left" method="post">
     @FormAction()
-    <div class="row-fluid">
+    <div class="row">
         <div class="inline display width140 align-top">
             @Html.DisplayFor(m => m.TitleCode)
             @Html.DisplayFor(m => m.FirstName)
@@ -26,7 +26,7 @@
         </div>
     </div>
     <hr/>
-    <div class="row-fluid">
+    <div class="row">
         <div class="inline display width140">
             @Html.DisplayFor(m => m.EmailAddress)
             @Html.DisplayFor(m => m.EmailAddress2)

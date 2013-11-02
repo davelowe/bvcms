@@ -5,13 +5,13 @@
         <h3>Tag All</h3>
     </div>
     <div class="modal-body">
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label">TagName:</label>
             <div class="controls">
                 <input name="tagname" type="text" value="@Util2.CurrentTagName" data-rule-required="true" />
             </div>
         </div>
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label">Clear Tag First:</label>
             <div class="controls">
                 @Html.CheckBox("cleartagfirst", false)
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <a class="btn btn-success" data-dismiss="modal">Close</a>
-        <input type="submit" class="btn btn-primary" value="OK" />
+        <a class="btn btn-default btn-success" data-dismiss="modal">Close</a>
+        <input type="submit" class="btn btn-default btn-primary" value="OK" />
     </div>
 </form>

@@ -1,7 +1,7 @@
 ﻿@model CmsWeb.Areas.People.Models.BasicPersonInfo
 <form class="form form-horizontal ajax span12" method="post">
     @FormAction()
-    <div class="row-fluid">
+    <div class="row">
         <div class="inline align-top">
             @Html.HiddenFor(m => m.PeopleId)
             @Html.EditorFor(m => m.TitleCode)
@@ -26,7 +26,7 @@
         </div>
     </div>
     <hr/>
-    <div class="row-fluid">
+    <div class="row">
         <div class="inline">
             @Html.EditorFor(m => m.EmailAddress)
             @Html.EditorFor(m => m.EmailAddress2)
@@ -46,8 +46,8 @@
 {
     <div class="form-actions">
         <span class="pull-right">
-            <a href="/Person2/PersonalDisplay/@Model.PeopleId" class="btn ajax">Cancel</a>
-            <a href="/Person2/PersonalUpdate/@Model.PeopleId" class="btn btn-primary ajax validate">Save Changes</a>
+            <a href="/Person2/PersonalDisplay/@Model.PeopleId" class="btn btn-default ajax">Cancel</a>
+            <a href="/Person2/PersonalUpdate/@Model.PeopleId" class="btn btn-default btn-primary ajax validate">Save Changes</a>
         </span>
     </div>
 }

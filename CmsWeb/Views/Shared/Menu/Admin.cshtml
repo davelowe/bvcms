@@ -16,8 +16,8 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin</a>
             <ul class="dropdown-menu dropdown-div-admin">
                 <li>
-                    <div class="row-fluid">
-                        <ul class="span5 unstyled pull-left">
+                    <div class="row">
+                        <ul class="col-md-5 unstyled pull-left">
                             <li class="header">Contributions</li>
                             @Helper.LiAnchorLink("Bundles", "/Bundles/")
                             @Helper.LiAnchorLink("Search All", "/Finance/Contributions/")
@@ -36,10 +36,10 @@
                             @Helper.LiAnchorLink("Batch Upload Contributions", "/PostBundle/Batch/")
                             @Helper.LiAnchorLink("QuickBooks", "/QuickBooks/", quickbooks)
                         </ul>
-                        <ul class="span4 unstyled pull-left">
+                        <ul class="col-md-4 unstyled pull-left">
                             @AdminList2(admin, design, managetrans, edit, manageemails, true, developer)
                         </ul>
-                        <ul class="span3 unstyled pull-left">
+                        <ul class="col-md-3 unstyled pull-left">
                             @AdminList1(admin, design, managetrans, edit, manageemails, true)
                         </ul>
                     </div>

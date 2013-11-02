@@ -11,12 +11,12 @@ else
     <a href="@Model.Picture.LargeUrl" title="Click to see larger version" target="_blank">@Picture()</a>
 }
 <div class="profile">
-    <h2 id="nameline" class="span8 @(Model.Person.IsDeceased == true ? "alert alert-danger" : "")">
+    <h2 id="nameline" class="col-md-8 @(Model.Person.IsDeceased == true ? "alert alert-danger" : "")">
         @Model.Name
     </h2>
     @if (User.IsInRole("Access"))
     {
-        <div class="span4 pull-right" id="profile-actions">
+        <div class="col-md-4 pull-right" id="profile-actions">
             @Html.Partial("Toolbar/Toolbar", Model.Users)
         </div>
     }

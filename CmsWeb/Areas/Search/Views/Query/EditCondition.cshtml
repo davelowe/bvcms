@@ -7,12 +7,12 @@
     @Html.Hidden("SelectedId", Model.SelectedId)
     <fieldset id="condition-edit">
         <legend></legend>
-        <div class="row-fluid table not-wide" id="CategoryDiv2">
+        <div class="row table not-wide" id="CategoryDiv2">
             <div class="inline align-top">
-                <div class="control-group">
+                <div class="form-group">
                     <label>Select a Condition</label>
                     <div class="controls">
-                        <p><a id="SelectCondition" class="btn btn-success"><span id="ConditionText">@Model.ConditionText</span></a></p>
+                        <p><a id="SelectCondition" class="btn btn-default btn-success"><span id="ConditionText">@Model.ConditionText</span></a></p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 @Html.EditorForIf(m => m.DateValue, Model.DateVisible)
             </div>
         </div>
-        <div class="row-fluid table not-wide form-horizontal">
+        <div class="row table not-wide form-horizontal">
             @Html.EditorForIf(m => m.StartDate, Model.StartDateVisible)
             @Html.EditorForIf(m => m.EndDate, Model.EndDateVisible)
             @Html.EditorForIf(m => m.Quarters, Model.QuartersVisible, new { label = Model.QuartersLabel })

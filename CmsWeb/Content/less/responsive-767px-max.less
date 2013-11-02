@@ -18,7 +18,7 @@
     margin-right: -20px;
   }
   // Remove padding on container given explicit padding set on body
-  .container-fluid {
+  .container {
     padding: 0;
   }
 
@@ -44,7 +44,7 @@
     width: auto;
   }
   // Fluid rows
-  .row-fluid {
+  .row {
     width: 100%;
   }
   // Undo negative margin on rows and thumbnails
@@ -59,7 +59,7 @@
   // Make all grid-sized elements block level again
   [class*="span"],
   .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
-  .row-fluid [class*="span"] {
+  .row [class*="span"] {
     float: none;
     display: block;
     width: 100%;
@@ -67,11 +67,11 @@
     .box-sizing(border-box);
   }
   .span12,
-  .row-fluid .span12 {
+  .row .span12 {
     width: 100%;
     .box-sizing(border-box);
   }
-  .row-fluid [class*="offset"]:first-child {
+  .row [class*="offset"]:first-child {
     margin-left: 0;
   }
 

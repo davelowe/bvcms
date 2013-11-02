@@ -24,15 +24,15 @@
     @Html.Raw(p.AddressInfo.Error)
 </div>
 <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Cancel All</a>
-    <a href="/SearchAdd2/CancelPerson/@n" class="btn ajax">Cancel Person</a>
+    <a href="#" class="btn btn-default" data-dismiss="modal">Cancel All</a>
+    <a href="/SearchAdd2/CancelPerson/@n" class="btn btn-default ajax">Cancel Person</a>
     @if (p.AddressInfo.Error.HasValue())
     {
-        <a href="/SearchAdd2/AddNewAddress/NoCheck" class="btn btn-danger ajax">Skip Address Check</a>
-        <a href="/SearchAdd2/AddNewAddress" class="btn btn-primary ajax validate">Submit Again</a>
+        <a href="/SearchAdd2/AddNewAddress/NoCheck" class="btn btn-default btn-danger ajax">Skip Address Check</a>
+        <a href="/SearchAdd2/AddNewAddress" class="btn btn-default btn-primary ajax validate">Submit Again</a>
     }
     else
     {
-        <a href="/SearchAdd2/AddNewAddress" class="btn btn-primary ajax validate">Submit</a>
+        <a href="/SearchAdd2/AddNewAddress" class="btn btn-default btn-primary ajax validate">Submit</a>
     }
 </div>
